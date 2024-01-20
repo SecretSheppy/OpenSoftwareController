@@ -1,0 +1,116 @@
+.title-bar {
+    --control-width: 48px;
+
+    width: 100vw;
+    height: 32px;
+    display: flex;
+    user-select: none;
+
+    & > .icon-wrapper {
+        width: var(--control-width);
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-app-region: drag;
+
+        & > .icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    & > .menu-bar {
+        display: flex;
+
+        & > .item-wrapper {
+            & > .item {
+                height: 100%;
+                padding: 0 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Segoe UI", sans-serif;
+                font-weight: lighter;
+                font-size: 15px;
+                color: var(--title-bar-color);
+                position: relative;
+                z-index: 200;
+            }
+
+            & > .menu {
+                display: none;
+                position: absolute;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 5px;
+                background-color: var(--frame-background);
+                border: 1px solid var(--frame-border);
+                border-radius: 10px;
+                padding: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+                z-index: 199;
+
+                & > .button {
+                    min-width: 200px;
+                    padding: 2px 10px;
+                    font-family: "Segoe UI", sans-serif;
+                    font-size: 15px;
+                    border-radius: 7px;
+                    color: var(--title-bar-color);
+
+                    &:hover {
+                        background: var(--title-bar-hover);
+                    }
+                }
+            }
+
+            &:hover {
+                & > .item {
+                    background-color: var(--title-bar-hover);
+                }
+
+                & > .menu {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    & > .draggable-spacer {
+        width: 100%;
+        -webkit-app-region: drag;
+    }
+
+    & > .controls {
+        width: calc(var(--control-width) * 3);
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        & > .button {
+            width: var(--control-width);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > .icon {
+                width: 10px;
+                height: 10px;
+            }
+
+            &:hover {
+                background: var(--title-bar-hover);
+            }
+        }
+
+        & > .close {
+            &:hover {
+                background: #ff2317;
+            }
+        }
+    }
+}

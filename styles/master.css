@@ -1,0 +1,15 @@
+@import url('frame.css');
+@import url('title-bar.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --frame-background: #2d2d2d;
+    --frame-border: #424242;
+    --title-bar-color: #fff;
+    --title-bar-hover: #424242;
+}
