@@ -54,11 +54,17 @@
         doubleSquareIcon.style.display = "none";
     });
 
-    win.on('close', function () {
+    win.on('move', function () {
         environmentData.position.x = win.x;
         environmentData.position.y = win.y;
+    });
+
+    win.on('resize', function () {
         environmentData.size.width = win.width;
         environmentData.size.height = win.height;
+    });
+
+    win.on('close', function () {
         jt.save('./data/environment.json', environmentData);
         win.close(true);
     });
