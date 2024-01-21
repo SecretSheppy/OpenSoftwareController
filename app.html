@@ -5,6 +5,7 @@
     <title>Open Software Controller</title>
     <link rel="stylesheet" href="styles/master.css" />
     <script type="text/javascript" src="environment.js" defer></script>
+    <script type="text/javascript" src="osc.js" defer></script>
 </head>
 <body>
 <div class="frame" id="frame">
@@ -116,35 +117,39 @@
                     </div>
                     <div class="tab-text">Contract Navbar</div>
                 </div>
-                <div class="tab active">
+                <div class="tab active" id="home-tab">
                     <img class="icon" src="graphics/icons/house.png" alt="home" />
                     <div class="tab-text">Home</div>
                 </div>
-                <div class="tab">
+                <div class="tab" id="library-tab">
                     <img class="icon" src="graphics/icons/tiles.png" alt="tiles" />
                     <div class="tab-text">Library</div>
                 </div>
             </div>
             <div class="tabs nav-end">
-                <div class="tab">
+                <div class="tab" id="notifications-tab">
                     <img class="icon" src="graphics/icons/bell.png" alt="notifications" />
                     <div class="tab-text">Notifications</div>
                 </div>
-                <div class="tab">
+                <div class="tab" id="downloads-tab">
                     <div class="animated-icon-wrapper">
                         <img class="icon" src="graphics/icons/download_arrow_part_1.png" alt="download" />
                         <img class="icon animated-to-bottom" src="graphics/icons/download_arrow_part_2.png" alt="download" />
                     </div>
                     <div class="tab-text">Downloads</div>
                 </div>
-                <div class="tab">
+                <div class="tab" id="settings-tab">
                     <img class="icon" src="graphics/icons/cog.png" alt="settings" />
                     <div class="tab-text">Settings</div>
                 </div>
             </div>
         </div>
         <div class="content">
-
+            <div id="home-tab-content"></div>
+            <div id="library-tab-content"></div>
+            <div id="notifications-tab-content"></div>
+            <div id="downloads-tab-content"></div>
+            <div id="settings-tab-content"></div>
         </div>
     </div>
 </div>
