@@ -64,6 +64,20 @@
                         background: var(--title-bar-hover);
                     }
                 }
+
+                & > .inactive {
+                    opacity: 0.5;
+
+                    &:hover {
+                        background: var(--frame-background);
+                    }
+                }
+
+                & > hr {
+                    width: 100%;
+                    border: none;
+                    border-bottom: solid 1px var(--frame-border);
+                }
             }
 
             &:hover {
