@@ -1,5 +1,8 @@
 @import url('frame.css');
 @import url('title-bar.css');
+@import url('window-wrapper.css');
+@import url('navbar.css');
+@import url('content.css');
 
 * {
     margin: 0;
