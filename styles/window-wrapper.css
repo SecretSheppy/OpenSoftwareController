@@ -1,0 +1,6 @@
+.window-wrapper {
+    width: 100vw;
+    height: calc(100vh - 32px);
+    overflow: hidden;
+    display: flex;
+}

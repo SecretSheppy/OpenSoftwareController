@@ -1,0 +1,102 @@
+.navbar {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: width 0.7s ease;
+    user-select: none;
+
+    & > .tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+
+        & > .tab {
+            width: calc(100% - 16px);
+            height: 34px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: width 0.7s ease;
+            gap: 10px;
+            overflow: hidden;
+
+            & > .icon {
+                width: 15px;
+                height: 15px;
+            }
+
+            .animated-icon-wrapper {
+                width: 15px;
+                height: 15px;
+                flex-shrink: 0;
+
+                & > .icon {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    transition: transform 0.7s ease;
+                }
+            }
+
+            & > #navbar-expansion-icon {
+                transition: transform 0.7s ease;
+            }
+
+            & > .tab-text {
+                flex-shrink: 0;
+                font-family: "Segoe UI", sans-serif;
+                font-size: 15px;
+                line-height: 15px;
+                color: var(--title-bar-color);
+            }
+
+            &:hover {
+                background: var(--title-bar-hover);
+
+                & > .animated-icon-wrapper {
+                    & > .animated-to-right {
+                        transform: translateX(4px);
+                    }
+
+                    & > .animated-to-bottom {
+                        transform: translateY(4px);
+                    }
+                }
+            }
+        }
+
+        & > .active {
+            outline: solid 2px var(--title-bar-color);
+        }
+
+        &:first-child {
+            margin-top: 8px;
+        }
+
+        &:last-child {
+            margin-bottom: 8px;
+        }
+    }
+
+    & > .nav-end {
+        margin-top: auto;
+        order: 2;
+    }
+}
+
+.expanded {
+    width: 250px;
+
+    & > .tabs {
+        & > .tab {
+            & > #navbar-expansion-icon {
+                transform: rotateZ(180deg);
+            }
+        }
+    }
+}

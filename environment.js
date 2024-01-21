@@ -10,6 +10,7 @@
         = document.getElementById('maximize-square-icon');
     const doubleSquareIcon
         = document.getElementById('maximize-squares-icon');
+    const navbar = document.getElementById('navbar');
 
     function startupProcedure () {
         win.hide();
@@ -39,6 +40,15 @@
     document.getElementById('title-bar-close-button')
         .addEventListener('click', function () {
             win.close();
+        });
+
+    document.getElementById('navbar-expansion-toggle')
+        .addEventListener('click', function () {
+            if (navbar.classList.contains('expanded')) {
+                navbar.classList.remove('expanded');
+            } else {
+                navbar.classList.add('expanded');
+            }
         });
 
     win.on('maximize', function () {
