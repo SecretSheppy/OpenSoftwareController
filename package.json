@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "main": "app.html",
     "window": {
-        "icon": "",
+        "icon": "graphics/icons/osc_icon.png",
         "frame": false,
         "toolbar": false,
         "width": 1100,
