@@ -11,5 +11,6 @@
         "height": 700,
         "min_height": 650,
         "transparent": true
-    }
+    },
+    "chromium-args": "--mixed-context"
 }
