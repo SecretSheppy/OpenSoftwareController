@@ -2,6 +2,8 @@
 
     'use strict';
 
+    const string = require('./string-tools');
+
     module.exports = exports = createTabEvents;
 
     /**
@@ -32,6 +34,15 @@
         }
 
         /**
+         * Sets the window title to the title of the passed tab
+         * @param {HTMLElement} tab
+         */
+        function setWindowTitleToTab (tab) {
+            document.title = "Open Software Controller - "
+                + string.capitalizeFirstLetter(tab.id.replace(/-tab/g, ''));
+        }
+
+        /**
          * Makes the passed tab active
          * @param {HTMLElement} tab - The tab to make active
          */
@@ -44,6 +55,7 @@
             tab.addEventListener('click', () => {
                 makeAllTabsInactive();
                 makeTabActive(tab);
+                setWindowTitleToTab(tab);
             });
         });
 
