@@ -46,6 +46,8 @@
                 makeTabActive(tab);
             });
         });
+
+        rawTabs[0].click();
     }
 
 })();
