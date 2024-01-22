@@ -11,6 +11,8 @@
 }
 
 :root {
+    --system-theme: #378163;
+    --system-theme-lighter: #47a884;
     --frame-background: #2d2d2d;
     --frame-border: #424242;
     --title-bar-color: #fff;

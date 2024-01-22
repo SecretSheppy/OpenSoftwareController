@@ -56,7 +56,7 @@
             }
 
             &:hover {
-                background: var(--title-bar-hover);
+                background: var(--system-theme-lighter);
 
                 & > .animated-icon-wrapper {
                     & > .animated-to-right {
@@ -67,6 +67,12 @@
                         transform: translateY(4px);
                     }
                 }
+            }
+        }
+
+        & > .control {
+            &:hover {
+                background: var(--title-bar-hover);
             }
         }
 
