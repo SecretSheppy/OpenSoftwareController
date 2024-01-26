@@ -29,7 +29,7 @@
         function makeAllTabsInactive () {
             rawTabs.forEach((tab) => {
                 tab.classList.remove('active');
-                getTabContent(tab).classList.remove('active');
+                getTabContent(tab).classList.remove('tab-active');
             });
         }
 
@@ -48,7 +48,7 @@
          */
         function makeTabActive (tab) {
             tab.classList.add('active');
-            getTabContent(tab).classList.add('active');
+            getTabContent(tab).classList.add('tab-active');
         }
 
         rawTabs.forEach((tab) => {
