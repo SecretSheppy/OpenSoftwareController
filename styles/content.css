@@ -5,4 +5,10 @@
     border-radius: 10px 0 0 0;
     position: relative;
     overflow: hidden;
+
+    & > .tab {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
 }
