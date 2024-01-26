@@ -2,6 +2,9 @@
 
     'use strict';
 
-    require('./modules/tab-events')();
+    const tabEventsController = require('./modules/tab-events-controller');
+
+    tabEventsController.createTabEvents(document.getElementById('navbar'),
+        [0], true);
 
 })();
