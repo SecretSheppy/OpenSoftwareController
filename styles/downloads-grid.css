@@ -1,0 +1,29 @@
+.downloads-grid {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas:
+            "progress status"
+            "queue queue";
+    grid-template-columns: 300px auto;
+    grid-template-rows: 300px auto;
+
+    & > .container {
+        background: var(--frame-background);
+        border-radius: 10px;
+    }
+
+    & > .progress-bar-wrapper {
+        grid-area: progress;
+    }
+
+    & > .status-wrapper {
+        grid-area: status;
+    }
+
+    & > .queue-wrapper {
+        grid-area: queue;
+    }
+}
