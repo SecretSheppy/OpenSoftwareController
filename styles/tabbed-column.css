@@ -1,0 +1,54 @@
+.tabbed-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+
+    & > .tabs {
+        width: 250px;
+        height: fit-content;
+        max-height: 100%;
+        background: var(--frame-background);
+        border-radius: 10px;
+        flex-shrink: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & > .tab {
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: "Segoe UI", sans-serif;
+            color: #fff;
+            cursor: default;
+
+            &:hover {
+                background: var(--system-theme-lighter);
+            }
+        }
+
+        & > .active {
+            outline: solid 2px #fff;
+        }
+    }
+
+    & > .tabs-content {
+        width: 100%;
+        height: 100%;
+        background: var(--frame-background);
+        border-radius: 10px;
+
+        & > .content-tab {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        & > .active {
+            display: block;
+        }
+    }
+}
