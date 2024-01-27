@@ -3,6 +3,7 @@
 @import url('window-wrapper.css');
 @import url('navbar.css');
 @import url('content.css');
+@import url('scrollbar.css');
 
 * {
     margin: 0;
