@@ -4,6 +4,9 @@
 @import url('navbar.css');
 @import url('content.css');
 @import url('scrollbar.css');
+@import url('tabbed-column.css');
+@import url('downloads-grid.css');
+@import url('notifications.css');
 
 * {
     margin: 0;
