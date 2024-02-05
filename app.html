@@ -159,9 +159,24 @@
                         <div class="tab" id="library-external-projects-tab">External projects</div>
                     </div>
                     <div class="tabs-content">
-                        <div class="content-tab" id="library-installed-tab-content">hi</div>
-                        <div class="content-tab" id="library-local-projects-tab-content">hi:)</div>
-                        <div class="content-tab" id="library-external-projects-tab-content">hikjdslajfoidsanfon</div>
+                        <div class="content-tab" id="library-installed-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Installed Applications</h1>
+                                <p class="description">View your installation locations</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="library-local-projects-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Local Projects</h1>
+                                <p class="description">Manage your local projects</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="library-external-projects-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">External Projects</h1>
+                                <p class="description">Manage external projects not officially supported by Open Software Controller</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,25 +196,64 @@
             <div class="content-tab" id="downloads-tab-content">
                 <div class="downloads-grid">
                     <div class="container progress-bar-wrapper">
-
+                        <canvas></canvas>
                     </div>
                     <div class="container status-wrapper">
 
                     </div>
                     <div class="container queue-wrapper">
-
+                        
                     </div>
                 </div>
             </div>
             <div class="content-tab" id="settings-tab-content">
+                <!-- make an advanced settings tab -->
                 <div class="tabbed-column">
                     <div class="tabs">
-                        <div class="tab" id="settings-installation-tab">Installation Config</div>
+                        <div class="tab" id="settings-installation-tab">Installation Configuration</div>
                         <div class="tab" id="settings-build-tools-tab">Build Tools</div>
+                        <div class="tab" id="settings-updates-tab">Updates</div>
+                        <div class="tab" id="settings-interface-tab">Interface</div>
+                        <div class="tab" id="settings-shortcuts-tab">Shortcuts</div>
+                        <div class="tab" id="settings-advanced-tab">Advanced Settings</div>
                     </div>
                     <div class="tabs-content">
-                        <div class="content-tab" id="settings-installation-tab-content">hi</div>
-                        <div class="content-tab" id="settings-build-tools-tab-content">hi:)</div>
+                        <div class="content-tab" id="settings-installation-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Installation Settings</h1>
+                                <p class="description">Manage your installation locations and configurations</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-build-tools-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Build Tools</h1>
+                                <p class="description">Locate and manage installed system build tools</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-updates-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Update Settings</h1>
+                                <p class="description">Manage update settings for your installed applications</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-interface-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Interface Settings</h1>
+                                <p class="description">Manage the Open Software Controller interface</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-shortcuts-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Shortcut Settings</h1>
+                                <p class="description">Manage your Open Software Controller shortcuts</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-advanced-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Advanced Settings</h1>
+                                <p class="description">Fine tune installation and update settings for those with more experience</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
