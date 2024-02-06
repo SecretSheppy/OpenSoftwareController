@@ -13,14 +13,14 @@
         <div class="icon-wrapper">
             <img class="icon" src="graphics/icons/osc_icon.png" alt="app icon" />
         </div>
-        <div class="menu-bar">
+        <div class="menu-bar" id="menu-bar">
             <div class="item-wrapper">
                 <div class="item">File</div>
                 <div class="menu">
                     <div class="button inactive">Save Current File</div>
                     <div class="button inactive">Reload Current File</div>
                     <hr>
-                    <div class="button">Settings</div>
+                    <div class="button" id="menu-bar-settings-button">Settings</div>
                     <div class="button">Clear Cache</div>
                     <hr>
                     <div class="button">Repair OSC</div>
@@ -28,7 +28,7 @@
                     <div class="button">Clear OSC Cache</div>
                     <div class="button">Remove OSC</div>
                     <hr>
-                    <div class="button">Exit</div>
+                    <div class="button" id="menu-bar-exit-button">Exit</div>
                 </div>
             </div>
             <div class="item-wrapper">
@@ -56,7 +56,7 @@
             <div class="item-wrapper">
                 <div class="item">History</div>
                 <div class="menu">
-                    <div class="button">Favorites</div>
+                    <div class="button" id="menu-bar-favorites-button">Favorites</div>
                     <hr>
                     <div class="button">Download History</div>
                     <div class="button">Browsing History</div>
@@ -92,7 +92,7 @@
                     <div class="button">Check OSC For Updates</div>
                     <div class="button">Check Library For Updates</div>
                     <hr>
-                    <div class="button">About OSC</div>
+                    <div class="button" id="menu-bar-about-button">About OSC</div>
                 </div>
             </div>
         </div>
@@ -155,6 +155,7 @@
                 <div class="tabbed-column">
                     <div class="tabs">
                         <div class="tab" id="library-installed-tab">Installed</div>
+                        <div class="tab" id="library-favorites-tab">Favorites</div>
                         <div class="tab" id="library-local-projects-tab">Local projects</div>
                         <div class="tab" id="library-external-projects-tab">External projects</div>
                     </div>
@@ -163,6 +164,12 @@
                             <div class="tab-title-wrapper">
                                 <h1 class="title">Installed Applications</h1>
                                 <p class="description">View your installation locations</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="library-favorites-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">Favorite Applications</h1>
+                                <p class="description">View your favorite applications</p>
                             </div>
                         </div>
                         <div class="content-tab" id="library-local-projects-tab-content">
@@ -215,6 +222,7 @@
                         <div class="tab" id="settings-updates-tab">Updates</div>
                         <div class="tab" id="settings-interface-tab">Interface</div>
                         <div class="tab" id="settings-shortcuts-tab">Shortcuts</div>
+                        <div class="tab" id="settings-about-tab">About OSC</div>
                         <div class="tab" id="settings-advanced-tab">Advanced Settings</div>
                     </div>
                     <div class="tabs-content">
@@ -246,6 +254,12 @@
                             <div class="tab-title-wrapper">
                                 <h1 class="title">Shortcut Settings</h1>
                                 <p class="description">Manage your Open Software Controller shortcuts</p>
+                            </div>
+                        </div>
+                        <div class="content-tab" id="settings-about-tab-content">
+                            <div class="tab-title-wrapper">
+                                <h1 class="title">About Open Software Controller</h1>
+                                <p class="description">Find out about the OSC project</p>
                             </div>
                         </div>
                         <div class="content-tab" id="settings-advanced-tab-content">

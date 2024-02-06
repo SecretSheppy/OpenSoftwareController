@@ -84,7 +84,11 @@
                 & > .item {
                     background-color: var(--system-theme-lighter);
                 }
+            }
+        }
 
+        & > .menu-bar-focused {
+            &:hover {
                 & > .menu {
                     display: flex;
                 }

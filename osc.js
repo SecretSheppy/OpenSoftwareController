@@ -2,6 +2,7 @@
 
     'use strict';
 
+    require('./modules/menu-bar-events')();
     const tabEventsController = require('./modules/tab-events-controller');
 
     tabEventsController.createTabEvents(
