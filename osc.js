@@ -4,6 +4,7 @@
 
     require('./modules/menu-bar-events')();
     const tabEventsController = require('./modules/tab-events-controller');
+    const progressBarController = require('./modules/progress-bar-controller');
 
     tabEventsController.createTabEvents(
         document.getElementById('navbar'), [0], true);
@@ -11,5 +12,8 @@
         document.getElementById('settings-tab-content'));
     tabEventsController.createTabEvents(
         document.getElementById('library-tab-content'));
+
+    progressBarController.initializeProgressBar();
+    progressBarController.updateProgressBar(43);
 
 })();
