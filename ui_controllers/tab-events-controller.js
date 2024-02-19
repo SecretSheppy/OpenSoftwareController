@@ -2,7 +2,7 @@
 
     'use strict';
 
-    const string = require('./string-tools');
+    const string = require('../modules/string-tools');
 
     module.exports = exports = { createTabEvents };
 

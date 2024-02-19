@@ -2,9 +2,9 @@
 
     'use strict';
 
-    require('./modules/menu-bar-events')();
-    const tabEventsController = require('./modules/tab-events-controller');
-    const progressBarController = require('./modules/progress-bar-controller');
+    require('./ui_controllers/menu-bar-events')();
+    const tabEventsController = require('./ui_controllers/tab-events-controller');
+    const progressBarController = require('./ui_controllers/progress-bar-controller');
 
     tabEventsController.createTabEvents(
         document.getElementById('navbar'), [0], true);
