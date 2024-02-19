@@ -61,7 +61,7 @@
                     color: var(--title-bar-color);
 
                     &:hover {
-                        background: var(--system-theme-lighter);
+                        background: var(--system-theme);
                     }
                 }
 
@@ -82,7 +82,7 @@
 
             &:hover {
                 & > .item {
-                    background-color: var(--system-theme-lighter);
+                    background-color: var(--system-theme);
                 }
             }
         }

@@ -15,11 +15,10 @@
 }
 
 :root {
-    --system-theme: #378163;
-    --system-theme-lighter: #47a884;
-    --frame-background: #2d2d2d;
-    --frame-border: #424242;
+    --system-theme: #92cfe5;
+    --frame-background: #45BBE7;
+    --frame-border: #ffffff;
     --title-bar-color: #fff;
-    --title-bar-hover: #424242;
-    --content-background: #4f4f4f;
+    --title-bar-hover: #92cfe5;
+    --content-background: #fff;
 }

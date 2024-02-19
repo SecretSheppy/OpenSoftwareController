@@ -56,7 +56,7 @@
             }
 
             &:hover {
-                background: var(--system-theme-lighter);
+                background: var(--system-theme);
 
                 & > .animated-icon-wrapper {
                     & > .animated-to-right {
