@@ -32,7 +32,9 @@
     }
 
     function startupProcedure () {
-        showSplashScreen();
+        if (!nw.App.argv.includes('--no-splash')) {
+            showSplashScreen();
+        }
         win.hide();
         win.moveTo(environmentData.position.x, environmentData.position.y);
         win.resizeTo(environmentData.size.width, environmentData.size.height);
