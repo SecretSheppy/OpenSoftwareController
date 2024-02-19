@@ -2,6 +2,8 @@
 
     'use strict';
 
+    const browser = require('../modules/browser');
+
     module.exports = exports = createMenuBarEvents;
 
     /**
@@ -58,6 +60,13 @@
                 document.getElementById('settings-tab').click();
                 document.getElementById('settings-about-tab').click();
                 blurMenuBar();
+            });
+
+        document.getElementById('menu-bar-open-github')
+            .addEventListener('click', function () {
+                browser.openInDefault(
+                    require('../package').repository.url.replace(/git\+/, '')
+                );
             });
 
     }
