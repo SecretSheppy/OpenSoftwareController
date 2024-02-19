@@ -12,7 +12,27 @@
         = document.getElementById('maximize-squares-icon');
     const navbar = document.getElementById('navbar');
 
+    function showSplashScreen () {
+        nw.Window.open('splash.html', {
+            frame: false,
+            width: 600,
+            height: 375,
+            resizable: false,
+            show: true,
+            position: 'center',
+            focus: true,
+            always_on_top: true
+        }, function (splashWindow) {
+            splashWindow.on('loaded', function () {
+                setTimeout(function () {
+                    splashWindow.close();
+                }, 2000);
+            });
+        });
+    }
+
     function startupProcedure () {
+        showSplashScreen();
         win.hide();
         win.moveTo(environmentData.position.x, environmentData.position.y);
         win.resizeTo(environmentData.size.width, environmentData.size.height);
