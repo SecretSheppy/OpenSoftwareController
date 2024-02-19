@@ -12,6 +12,9 @@
         = document.getElementById('maximize-squares-icon');
     const navbar = document.getElementById('navbar');
 
+    /**
+     * Show the splash screen (can be ignored by launching with --no-splash)
+     */
     function showSplashScreen () {
         nw.Window.open('splash.html', {
             frame: false,
@@ -31,6 +34,9 @@
         });
     }
 
+    /**
+     * The startup procedure for the main window
+     */
     function startupProcedure () {
         if (!nw.App.argv.includes('--no-splash')) {
             showSplashScreen();
