@@ -58,6 +58,24 @@
                 nw.Window.get().close();
             });
 
+        document.getElementById('menu-bar-open-github-wiki')
+            .addEventListener('click', function () {
+                browser.openInDefault(
+                    require('../package').repository.url
+                        .replace(/git\+|\.git/g, '') + "/wiki"
+                );
+                blurMenuBar();
+            });
+
+        document.getElementById('menu-bar-open-github-getting-started')
+            .addEventListener('click', function () {
+                browser.openInDefault(
+                    require('../package').repository.url
+                        .replace(/git\+|\.git/g, '') + "/wiki/Getting-Started"
+                );
+                blurMenuBar();
+            });
+
         document.getElementById('menu-bar-open-install-directory')
             .addEventListener('click', function () {
                 platformSwitch.switcher({
