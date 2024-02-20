@@ -5,6 +5,7 @@
     const { execSync } = require('child_process');
     const platformSwitch = require('../modules/platform-switch');
     const browser = require('../modules/browser');
+    const oscInstallManager = require('../modules/osc-install-manager');
 
     module.exports = exports = createMenuBarEvents;
 
@@ -72,6 +73,12 @@
                 browser.openInDefault(
                     require('../package').repository.url.replace(/git\+/, '')
                 );
+                blurMenuBar();
+            });
+
+        document.getElementById('menu-bar-osc-update')
+            .addEventListener('click', function () {
+                oscInstallManager.liveUpdate();
                 blurMenuBar();
             });
 
