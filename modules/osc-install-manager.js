@@ -6,7 +6,27 @@
     const notificationsManager
         = require('../ui_controllers/notification-manager');
 
-    module.exports = exports = { liveUpdate };
+    module.exports = exports = { liveUpdate, checkForInternetConnection };
+
+    /**
+     * Checks for an internet connection
+     * @returns {Promise<void>}
+     */
+    async function checkForInternetConnection () {
+        let ping = spawn('ping', ['1.1.1.1']);
+        let connection = true;
+
+        ping.stdout.on('data', (data) => {
+            if (data.includes('failed') && connection) {
+                notificationsManager.spawnNotification(
+                    'No internet connection',
+                    'Open Software Controller requires an internet' +
+                    ' connection to check for updates and clone repositories.',
+                    notificationsManager.ERROR);
+                connection = false;
+            }
+        });
+    }
 
     /**
      * Updates the Open Software Controller installation
@@ -16,6 +36,8 @@
         /*
         TODO: This only works if the user cloned the repository, if they
          downloaded the release version, there will be no repo to pull from
+        TODO: The "Update Available" notification should only be spawned once
+         per update cycle, not every time the stdout event is emitted
         */
         const pull = spawn('git', ['pull']);
         const updated = false;
