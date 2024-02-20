@@ -71,7 +71,17 @@
         document.getElementById('menu-bar-open-github')
             .addEventListener('click', function () {
                 browser.openInDefault(
-                    require('../package').repository.url.replace(/git\+/, '')
+                    require('../package').repository.url
+                        .replace(/git\+|\.git/g, '')
+                );
+                blurMenuBar();
+            });
+
+        document.getElementById('menu-bar-open-github-issues')
+            .addEventListener('click', function () {
+                browser.openInDefault(
+                    require('../package').repository.url
+                        .replace(/git\+|\.git/g, '') + "/issues/new"
                 );
                 blurMenuBar();
             });
