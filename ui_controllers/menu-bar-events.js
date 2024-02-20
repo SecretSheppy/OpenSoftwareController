@@ -2,6 +2,8 @@
 
     'use strict';
 
+    const { execSync } = require('child_process');
+    const platformSwitch = require('../modules/platform-switch');
     const browser = require('../modules/browser');
 
     module.exports = exports = createMenuBarEvents;
@@ -55,10 +57,13 @@
                 nw.Window.get().close();
             });
 
-        document.getElementById('menu-bar-about-button')
+        document.getElementById('menu-bar-open-install-directory')
             .addEventListener('click', function () {
-                document.getElementById('settings-tab').click();
-                document.getElementById('settings-about-tab').click();
+                platformSwitch.switcher({
+                    linux: 'xdg-open .',
+                    darwin: 'open .',
+                    win32: 'explorer .'
+                }, execSync);
                 blurMenuBar();
             });
 
