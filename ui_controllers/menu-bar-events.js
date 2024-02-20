@@ -67,6 +67,14 @@
                 browser.openInDefault(
                     require('../package').repository.url.replace(/git\+/, '')
                 );
+                blurMenuBar();
+            });
+
+        document.getElementById('menu-bar-about-button')
+            .addEventListener('click', function () {
+                document.getElementById('settings-tab').click();
+                document.getElementById('settings-about-tab').click();
+                blurMenuBar();
             });
 
     }
