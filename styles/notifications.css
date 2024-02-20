@@ -16,3 +16,77 @@
         flex-shrink: 0;
     }
 }
+
+.on-screen-notifications-wrapper {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+
+    & > .notification {
+        background: var(--frame-background);
+        border-radius: 10px;
+        border: solid 1px var(--frame-border);
+        height: 100px;
+        width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+
+        & > .notification-title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 8px;
+
+            & > .notification-title {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                font-family: "Segoe UI", sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                color: var(--title-bar-color);
+
+                & > .icon {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            & > .notification-controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & > .notification-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 5px;
+
+                    & > .icon {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    &:hover {
+                        background: var(--system-theme);
+                    }
+                }
+            }
+        }
+
+        & > .notification-content {
+            padding: 0 8px 5px 8px;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 13px;
+            color: var(--title-bar-color);
+        }
+    }
+}
