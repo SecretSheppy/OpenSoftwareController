@@ -40,7 +40,7 @@
             notificationsManager.spawnNotification(
                 'Update error',
                 'An error occurred while updating Open Software' +
-                ' Controller.',
+                ' Controller. Details: ' + data,
                 notificationsManager.ERROR);
         });
 
@@ -48,7 +48,8 @@
             if (updated) {
                 notificationsManager.spawnNotification(
                     'Update complete',
-                    'Open Software Controller has been updated.',
+                    'Open Software Controller has been updated.' +
+                    ' Details: ' + code,
                     notificationsManager.INFO);
             }
         });
