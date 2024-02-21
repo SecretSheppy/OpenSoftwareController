@@ -40,7 +40,7 @@
          per update cycle, not every time the stdout event is emitted
         */
         const pull = spawn('git', ['pull']);
-        const updated = false;
+        let updated = false;
 
         pull.stdout.on('data', (data) => {
             if (data.includes('Already up to date.')) {
