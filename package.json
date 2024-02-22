@@ -12,7 +12,7 @@
         "min_height": 650,
         "transparent": true
     },
-    "chromium-args": "--mixed-context",
+    "chromium-args": "--mixed-context --disable-pinch",
     "dependencies": {
         "jest": "^29.7.0"
     },
