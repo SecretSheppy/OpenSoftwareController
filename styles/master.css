@@ -7,6 +7,7 @@
 @import url('tabbed-column.css');
 @import url('downloads-grid.css');
 @import url('notifications.css');
+@import url('home.css');
 
 * {
     margin: 0;

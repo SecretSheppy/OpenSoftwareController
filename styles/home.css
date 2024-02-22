@@ -1,0 +1,86 @@
+.home-title-bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+
+    & .home-title-bar-box {
+        display: flex;
+        align-items: center;
+        height: 34px;
+        width: 34px;
+        border-radius: 10px;
+        background: var(--frame-background);
+        overflow: hidden;
+
+        & > .home-title-bar-button {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: var(--system-theme);
+            }
+
+            & > .icon {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    & .double-width {
+        width: 68px;
+
+        & > .home-title-bar-button {
+            width: 50%;
+        }
+    }
+
+    & > .home-title-bar-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    & .home-title-bar-search-wrapper {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        height: 34px;
+        border-radius: 10px;
+        border: solid 2px var(--frame-background);
+        overflow: hidden;
+
+        & > .search-input {
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            border: none;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 15px;
+        }
+
+        & > .search-button-wrapper {
+            height: 100%;
+            width: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--frame-background);
+            flex-shrink: 0;
+
+            & > .icon {
+                width: 15px;
+                height: 15px;
+            }
+
+            &:hover {
+                background: var(--system-theme);
+            }
+        }
+    }
+}
