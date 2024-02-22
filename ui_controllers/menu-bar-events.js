@@ -41,16 +41,16 @@
 
         document.getElementById('menu-bar-settings-button')
             .addEventListener('click', function () {
-                document.getElementById('settings-tab').click();
                 blurMenuBar();
+                document.getElementById('settings-tab').click();
             });
 
         document.getElementById('menu-bar-favorites-button')
             .addEventListener('click', function () {
+                blurMenuBar();
                 document.getElementById('library-favorites-tab')
                     .click();
                 document.getElementById('library-tab').click();
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-exit-button')
@@ -60,48 +60,48 @@
 
         document.getElementById('menu-bar-open-github-wiki')
             .addEventListener('click', function () {
+                blurMenuBar();
                 browser.openInDefault(
                     require('../package').repository.url
                         .replace(/git\+|\.git/g, '') + "/wiki"
                 );
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-open-github-getting-started')
             .addEventListener('click', function () {
+                blurMenuBar();
                 browser.openInDefault(
                     require('../package').repository.url
                         .replace(/git\+|\.git/g, '') + "/wiki/Getting-Started"
                 );
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-open-install-directory')
             .addEventListener('click', function () {
+                blurMenuBar();
                 platformSwitch.switcher({
                     linux: 'xdg-open .',
                     darwin: 'open .',
                     win32: 'explorer .'
                 }, execSync);
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-open-github')
             .addEventListener('click', function () {
+                blurMenuBar();
                 browser.openInDefault(
                     require('../package').repository.url
                         .replace(/git\+|\.git/g, '')
                 );
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-open-github-issues')
             .addEventListener('click', function () {
+                blurMenuBar();
                 browser.openInDefault(
                     require('../package').repository.url
                         .replace(/git\+|\.git/g, '') + "/issues/new"
                 );
-                blurMenuBar();
             });
 
         document.getElementById('menu-bar-osc-update')
@@ -112,9 +112,9 @@
 
         document.getElementById('menu-bar-about-button')
             .addEventListener('click', function () {
+                blurMenuBar();
                 document.getElementById('settings-tab').click();
                 document.getElementById('settings-about-tab').click();
-                blurMenuBar();
             });
 
     }
