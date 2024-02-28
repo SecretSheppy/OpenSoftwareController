@@ -17,127 +17,127 @@
 
         // Script detection
         [
-            /<script(.*)>(.*)<\/script>/g,
+            /<script(.*)>(.*)<\/script>/gm,
             "<div>WARNING: Script detected and removed</div>"
         ],
 
         // iframe detection
         [
-            /<iframe(.*)>(.*)<\/iframe>/g,
+            /<iframe(.*)>(.*)<\/iframe>/gm,
             "<div>WARNING: Iframe detected and removed</div>"
         ],
 
         // object detection
         [
-            /<object(.*)>(.*)<\/object>/g,
+            /<object(.*)>(.*)<\/object>/gm,
             "<div>WARNING: Object detected and removed</div>"
         ],
 
         // embed detection
         [
-            /<embed(.*)>/g,
+            /<embed(.*)>/gm,
             "<div>WARNING: Embed detected and removed</div>"
         ],
 
         // link detection
         [
-            /<link(.*)>/g,
+            /<link(.*)>/gm,
             "<div>WARNING: Link detected and removed</div>"
         ],
 
         // style detection
         [
-            /<style(.*)>(.*)<\/style>/g,
+            /<style(.*)>(.*)<\/style>/gm,
             "<div>WARNING: Style detected and removed</div>"
         ],
 
         // img detection
         [
-            /<img(.*)>/g,
+            /<img(.*)>/gm,
             "<div>WARNING: Image detected and removed</div>"
         ],
 
         // svg detection
         [
-            /<svg(.*)>(.*)<\/svg>/g,
+            /<svg(.*)>(.*)<\/svg>/gm,
             "<div>WARNING: SVG detected and removed</div>"
         ],
 
         // form detection
         [
-            /<form(.*)>(.*)<\/form>/g,
+            /<form(.*)>(.*)<\/form>/gm,
             "<div>WARNING: Form detected and removed</div>"
         ],
 
         // input detection
         [
-            /<input(.*)>/g,
+            /<input(.*)>/gm,
             "<div>WARNING: Input detected and removed</div>"
         ],
 
         // button detection
         [
-            /<button(.*)>(.*)<\/button>/g,
+            /<button(.*)>(.*)<\/button>/gm,
             "<div>WARNING: Button detected and removed</div>"
         ],
 
         // select detection
         [
-            /<select(.*)>(.*)<\/select>/g,
+            /<select(.*)>(.*)<\/select>/gm,
             "<div>WARNING: Select detected and removed</div>"
         ],
 
         // textarea detection
         [
-            /<textarea(.*)>(.*)<\/textarea>/g,
+            /<textarea(.*)>(.*)<\/textarea>/gm,
             "<div>WARNING: Textarea detected and removed</div>"
         ],
 
         // meta detection
         [
-            /<meta(.*)>/g,
+            /<meta(.*)>/gm,
             "<div>WARNING: Meta detected and removed</div>"
         ],
 
         // title detection
         [
-            /<title(.*)>(.*)<\/title>/g,
+            /<title(.*)>(.*)<\/title>/gm,
             "<div>WARNING: Title detected and removed</div>"
         ],
 
         // head detection
         [
-            /<head(.*)>(.*)<\/head>/g,
+            /<head(.*)>(.*)<\/head>/gm,
             "<div>WARNING: Head detected and removed</div>"
         ],
 
         // body detection
         [
-            /<body(.*)>(.*)<\/body>/g,
+            /<body(.*)>(.*)<\/body>/gm,
             "<div>WARNING: Body detected and removed</div>"
         ],
 
         // html detection
         [
-            /<html(.*)>(.*)<\/html>/g,
+            /<html(.*)>(.*)<\/html>/gm,
             "<div>WARNING: HTML detected and removed</div>"
         ],
 
         // DOCTYPE detection
         [
-            /<!DOCTYPE(.*)>/g,
+            /<!DOCTYPE(.*)>/gm,
             "<div>WARNING: DOCTYPE detected and removed</div>"
         ],
 
         // audio detection
         [
-            /<audio(.*)>(.*)<\/audio>/g,
+            /<audio(.*)>(.*)<\/audio>/gm,
             "<div>WARNING: Audio detected and removed</div>"
         ],
 
         // video detection
         [
-            /<video(.*)>(.*)<\/video>/g,
+            /<video(.*)>(.*)<\/video>/gm,
             "<div>WARNING: Video detected and removed</div>"
         ],
 
