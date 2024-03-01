@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="styles/splash.css" />
 </head>
 <body>
+<div class="splash-title-wrapper">
+    <h1 class="splash-title">Open Software Controller</h1>
+    <h3 class="splash-version"></h3>
+</div>
 <img src="graphics/splash/nx1c_software_startup.png" />
 </body>
+<script type="text/javascript">
+    'use strict';
+
+    document.getElementsByClassName('splash-version')[0].innerText = 'Version '
+        + require('./package.json').version;
+</script>
 </html>
