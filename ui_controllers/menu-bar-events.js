@@ -86,6 +86,16 @@
                 }, execSync);
             });
 
+        document.getElementById('menu-bar-run-automated-test')
+            .addEventListener('click', function () {
+                blurMenuBar();
+                platformSwitch.switcher({
+                    linux: 'gnome-terminal -- bash -c "npm test; exec bash"',
+                    darwin: 'open -a Terminal.app npm test',
+                    win32: 'start cmd /k npm test'
+                }, execSync);
+            });
+
         document.getElementById('menu-bar-open-github')
             .addEventListener('click', function () {
                 blurMenuBar();
