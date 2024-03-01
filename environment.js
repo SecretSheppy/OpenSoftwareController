@@ -103,7 +103,9 @@
     });
 
     win.on('close', function () {
-        jt.save('./data/environment.json', environmentData);
+        if (environmentData !== undefined) {
+            jt.save('./data/environment.json', environmentData);
+        }
         nw.App.closeAllWindows();
         win.close(true);
     });
